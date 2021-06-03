@@ -2,8 +2,24 @@ import React from 'react';
 import Card from '../card/card';
 import PropTypes from 'prop-types';
 
-function Main(props) {
+const cards = [];
 
+function getCardsList (card) {
+  cards.push(card);
+  return cards;
+}
+
+function getCardElement () {
+  let count = 0;
+  while (count < 6) {
+    getCardsList(<Card/>);
+    count++;
+  }
+}
+
+getCardElement();
+
+function Main(props) {
   return (
     <div>
       <html lang="ru">
@@ -35,7 +51,7 @@ function Main(props) {
                         <a className="header__nav-link header__nav-link--profile" href="#">
                           <div className="header__avatar-wrapper user__avatar-wrapper">
                           </div>
-                          <span className="header__user-name user__name">Oliver.conner@gmail.com</span>
+                          <span className="header__user-name user__name">{props.email}</span>
                         </a>
                       </li>
                       <li className="header__nav-item">
@@ -91,7 +107,7 @@ function Main(props) {
                 <div className="cities__places-container container">
                   <section className="cities__places places">
                     <h2 className="visually-hidden">Places</h2>
-                    <b className="places__found">312 places to stay in Amsterdam</b>
+                    <b className="places__found">{props.count} places to stay in {props.city}</b>
                     <form className="places__sorting" action="#" method="get">
                       <span className="places__sorting-caption">Sort by</span>
                       <span className="places__sorting-type" tabIndex="0">
@@ -108,7 +124,7 @@ function Main(props) {
                       </ul>
                     </form>
                     <div className="cities__places-list places__list tabs__content">
-                      {props.map((element) => <Card key={props.id}/>)}
+                      {cards.map(() => <Card key={cards.id}/>)}
 
                     </div>
                   </section>
@@ -123,9 +139,12 @@ function Main(props) {
       </html>
     </div>
   );
-  React.PropTypes = {
-    id: React.PropTypes.string,
-  }
 }
+
+Main.propTypes = {
+  city: PropTypes.string,
+  count: PropTypes.number,
+  email: PropTypes.string,
+};
 
 export default Main;

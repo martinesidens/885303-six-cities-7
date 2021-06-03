@@ -107,7 +107,7 @@ function Main(props) {
                       </ul>
                     </form>
                     <div className="cities__places-list places__list tabs__content">
-                      {new Array(6).map((_, idx) => idx).map((id) => <Card key={id} />)}
+                    {Array.from(new Array(6), (i) => i+5).map((id) => <Card key={id} />)}
                     </div>
                   </section>
                   <div className="cities__right-section">

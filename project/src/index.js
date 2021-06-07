@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app/app';
 
-const countSentenceRent = {
+const appSettings = {
   count: 330,
   city: 'Paris',
   email: 'martines.idens@gmail.com',
@@ -10,6 +10,6 @@ const countSentenceRent = {
 
 ReactDOM.render(
   <React.StrictMode>
-    <App count={countSentenceRent.count} city={countSentenceRent.city} email={countSentenceRent.email} />
+    <App count={appSettings.count} city={appSettings.city} email={appSettings.email} />
   </React.StrictMode>,
   document.getElementById('root'));

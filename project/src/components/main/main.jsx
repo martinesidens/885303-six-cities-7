@@ -2,23 +2,6 @@ import React from 'react';
 import Card from '../card/card';
 import PropTypes from 'prop-types';
 
-const cards = [];
-
-function getCardsList (card) {
-  cards.push(card);
-  return cards;
-}
-
-function getCardElement () {
-  let count = 0;
-  while (count < 6) {
-    getCardsList(<Card/>);
-    count++;
-  }
-}
-
-getCardElement();
-
 function Main(props) {
   return (
     <div>
@@ -124,8 +107,7 @@ function Main(props) {
                       </ul>
                     </form>
                     <div className="cities__places-list places__list tabs__content">
-                      {cards.map(() => <Card key={cards.id}/>)}
-
+                      {new Array(6).map((_, idx) => idx).map((id) => <Card key={id} />)}
                     </div>
                   </section>
                   <div className="cities__right-section">
@@ -142,9 +124,9 @@ function Main(props) {
 }
 
 Main.propTypes = {
-  city: PropTypes.string,
-  count: PropTypes.number,
-  email: PropTypes.string,
+  city: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
+  email: PropTypes.string.isRequired,
 };
 
 export default Main;

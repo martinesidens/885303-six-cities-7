@@ -1,13 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Main from './../main/main';
+import PropTypes from 'prop-types';
 
 function App (props) {
-  ReactDOM.render(
-    <Main count={props.count} city={props.city} email={props.email} />,
-    document.getElementById('root'),
+  return (
+    <Main count={props.count} city={props.city} email={props.email} />
   );
-  return null;
 }
+
+App.propTypes = {
+  city: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
+  email: PropTypes.string.isRequired,
+};
 
 export default App;

@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import Logo from '../logo/logo';
 
 function Offer() {
   return (
@@ -9,7 +10,7 @@ function Offer() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>6 cities: property</title>
         <link rel="stylesheet" href="css/main.css" />
-        <div style={{ display: "none" }}>
+        <div style={{ display: 'none' }}>
           <svg xmlns="http://www.w3.org/2000/svg">
             <symbol id="icon-arrow-select" viewBox="0 0 7 4">
               <path
@@ -35,15 +36,7 @@ function Offer() {
             <div className="container">
               <div className="header__wrapper">
                 <div className="header__left">
-                  <a className="header__logo-link" href="main.html">
-                    <img
-                      className="header__logo"
-                      src="img/logo.svg"
-                      alt="6 cities logo"
-                      width={81}
-                      height={41}
-                    />
-                  </a>
+                  <Logo />
                 </div>
                 <nav className="header__nav">
                   <ul className="header__nav-list">
@@ -134,7 +127,7 @@ function Offer() {
                   </div>
                   <div className="property__rating rating">
                     <div className="property__stars rating__stars">
-                      <span style={{ width: "80%" }} />
+                      <span style={{ width: '80%' }} />
                       <span className="visually-hidden">Rating</span>
                     </div>
                     <span className="property__rating-value rating__value">
@@ -157,7 +150,7 @@ function Offer() {
                     <span className="property__price-text">&nbsp;night</span>
                   </div>
                   <div className="property__inside">
-                    <h2 className="property__inside-title">What's inside</h2>
+                    <h2 className="property__inside-title">What is inside</h2>
                     <ul className="property__inside-list">
                       <li className="property__inside-item">Wi-Fi</li>
                       <li className="property__inside-item">Washing machine</li>
@@ -221,7 +214,7 @@ function Offer() {
                         <div className="reviews__info">
                           <div className="reviews__rating rating">
                             <div className="reviews__stars rating__stars">
-                              <span style={{ width: "80%" }} />
+                              <span style={{ width: '80%' }} />
                               <span className="visually-hidden">Rating</span>
                             </div>
                           </div>
@@ -283,7 +276,7 @@ function Offer() {
                       </div>
                       <div className="place-card__rating rating">
                         <div className="place-card__stars rating__stars">
-                          <span style={{ width: "80%" }} />
+                          <span style={{ width: '80%' }} />
                           <span className="visually-hidden">Rating</span>
                         </div>
                       </div>
@@ -329,7 +322,7 @@ function Offer() {
                       </div>
                       <div className="place-card__rating rating">
                         <div className="place-card__stars rating__stars">
-                          <span style={{ width: "80%" }} />
+                          <span style={{ width: '80%' }} />
                           <span className="visually-hidden">Rating</span>
                         </div>
                       </div>
@@ -375,7 +368,7 @@ function Offer() {
                       </div>
                       <div className="place-card__rating rating">
                         <div className="place-card__stars rating__stars">
-                          <span style={{ width: "100%" }} />
+                          <span style={{ width: '100%' }} />
                           <span className="visually-hidden">Rating</span>
                         </div>
                       </div>

@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import Logo from '../logo/logo';
 
 function Sign() {
   return (
@@ -8,7 +9,7 @@ function Sign() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>6 cities: authorization</title>
       <link rel="stylesheet" href="css/main.css" />
-      <div style={{ display: "none" }}>
+      <div style={{ display: 'none' }}>
         <svg xmlns="http://www.w3.org/2000/svg">
           <symbol id="icon-arrow-select" viewBox="0 0 7 4">
             <path
@@ -34,9 +35,7 @@ function Sign() {
           <div className="container">
             <div className="header__wrapper">
               <div className="header__left">
-                <a className="header__logo-link" href="main.html">
-                  <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width={81} height={41} />
-                </a>
+                <Logo />
               </div>
               <nav className="header__nav">
                 <ul className="header__nav-list">
@@ -82,5 +81,5 @@ function Sign() {
   );
 }
 
-export default Sing;
+export default Sign;
 

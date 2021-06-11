@@ -31,14 +31,14 @@ function Main(props) {
                   <nav className="header__nav">
                     <ul className="header__nav-list">
                       <li className="header__nav-item user">
-                        <Link className="header__nav-link header__nav-link--profile" to="/Favorites">
+                        <Link className="header__nav-link header__nav-link--profile" to="/Favorite">
                           <div className="header__avatar-wrapper user__avatar-wrapper">
                           </div>
                           <span className="header__user-name user__name">{props.email}</span>
                         </Link>
                       </li>
                       <li className="header__nav-item">
-                        <Link className="header__nav-link" to="/Sign In">
+                        <Link className="header__nav-link" to="/Sign">
                           <span className="header__signout">Sign out</span>
                         </Link>
                       </li>

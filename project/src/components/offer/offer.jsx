@@ -60,48 +60,13 @@ function Offer(props) {
             <section className="property">
               <div className="property__gallery-container container">
                 <div className="property__gallery">
-                  <div className="property__image-wrapper">
+                  {Array.from(new Array(6), (x,i) => i+1).map((id) => <div key={id} className="property__image-wrapper">
                     <img
                       className="property__image"
-                      src="img/room.jpg"
+                      src={props.dataOffer.image[id]}
                       alt="Photo studio"
                     />
-                  </div>
-                  <div className="property__image-wrapper">
-                    <img
-                      className="property__image"
-                      src="img/apartment-01.jpg"
-                      alt="Photo studio"
-                    />
-                  </div>
-                  <div className="property__image-wrapper">
-                    <img
-                      className="property__image"
-                      src="img/apartment-02.jpg"
-                      alt="Photo studio"
-                    />
-                  </div>
-                  <div className="property__image-wrapper">
-                    <img
-                      className="property__image"
-                      src="img/apartment-03.jpg"
-                      alt="Photo studio"
-                    />
-                  </div>
-                  <div className="property__image-wrapper">
-                    <img
-                      className="property__image"
-                      src="img/studio-01.jpg"
-                      alt="Photo studio"
-                    />
-                  </div>
-                  <div className="property__image-wrapper">
-                    <img
-                      className="property__image"
-                      src="img/apartment-01.jpg"
-                      alt="Photo studio"
-                    />
-                  </div>
+                  </div>)}
                 </div>
               </div>
               <div className="property__container container">

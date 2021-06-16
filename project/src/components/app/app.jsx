@@ -19,7 +19,8 @@ function App (props) {
         </Route>
         <Route path="/Favorite" exact component={Favorite}>
         </Route>
-        <Route path="/Offer/:id" exact component={Offer}>
+        <Route path="/Offer/:id" exact>
+          <Offer dataOffer={props.data} />
         </Route>
         <Route path="/Error" component={Error}>
         </Route>
@@ -32,6 +33,18 @@ App.propTypes = {
   city: PropTypes.string.isRequired,
   count: PropTypes.number.isRequired,
   email: PropTypes.string.isRequired,
+  data: PropTypes.shape({
+    image: PropTypes.array.isRequired,
+    title: PropTypes.string.isRequired,
+    property: PropTypes.shape({
+      type: PropTypes.string.isRequired,
+      rooms: PropTypes.string.isRequired,
+      adults: PropTypes.string.isRequired,
+    }),
+    price: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+    advantages: PropTypes.array.isRequired,
+  }),
 };
 
 export default App;

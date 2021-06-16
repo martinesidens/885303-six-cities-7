@@ -1,7 +1,9 @@
 import React from 'react';
 import Logo from '../logo/logo';
+import PropTypes from 'prop-types';
 
-function Offer() {
+function Offer(props) {
+
   return (
     <html lang="en">
       <div>
@@ -136,32 +138,23 @@ function Offer() {
                   </div>
                   <ul className="property__features">
                     <li className="property__feature property__feature--entire">
-                      Apartment
+                      {props.dataOffer.property.type}
                     </li>
                     <li className="property__feature property__feature--bedrooms">
-                      3 Bedrooms
+                      {props.dataOffer.property.rooms}
                     </li>
                     <li className="property__feature property__feature--adults">
-                      Max 4 adults
+                      {props.dataOffer.property.adults}
                     </li>
                   </ul>
                   <div className="property__price">
-                    <b className="property__price-value">€120</b>
-                    <span className="property__price-text">&nbsp;night</span>
+                    <b className="property__price-value">€{props.dataOffer.price}</b>
+                    <span className="property__price-text">&nbsp;{props.dataOffer.time}</span>
                   </div>
                   <div className="property__inside">
                     <h2 className="property__inside-title">What is inside</h2>
                     <ul className="property__inside-list">
-                      <li className="property__inside-item">Wi-Fi</li>
-                      <li className="property__inside-item">Washing machine</li>
-                      <li className="property__inside-item">Towels</li>
-                      <li className="property__inside-item">Heating</li>
-                      <li className="property__inside-item">Coffee machine</li>
-                      <li className="property__inside-item">Baby seat</li>
-                      <li className="property__inside-item">Kitchen</li>
-                      <li className="property__inside-item">Dishwasher</li>
-                      <li className="property__inside-item">Cabel TV</li>
-                      <li className="property__inside-item">Fridge</li>
+                      {Array.from(new Array(9), (x,i) => i+1).map((id) => <li key={id} className="property__inside-item">{props.dataOffer.advantages[id]}</li>)}
                     </ul>
                   </div>
                   <div className="property__host">
@@ -387,5 +380,20 @@ function Offer() {
     </html>
   );
 }
+
+Offer.propTypes = {
+  dataOffer: PropTypes.shape({
+    image: PropTypes.array.isRequired,
+    title: PropTypes.string.isRequired,
+    property: PropTypes.shape({
+      type: PropTypes.string.isRequired,
+      rooms: PropTypes.string.isRequired,
+      adults: PropTypes.string.isRequired,
+    }),
+    price: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+    advantages: PropTypes.array.isRequired,
+  }),
+};
 
 export default Offer;

@@ -3,7 +3,6 @@ import Logo from '../logo/logo';
 import PropTypes from 'prop-types';
 
 function Offer(props) {
-
   return (
     <html lang="en">
       <div>
@@ -60,134 +59,147 @@ function Offer(props) {
             <section className="property">
               <div className="property__gallery-container container">
                 <div className="property__gallery">
-                  {Array.from(new Array(6), (x,i) => i+1).map((id) => <div key={id} className="property__image-wrapper">
-                    <img
-                      className="property__image"
-                      src={props.dataOffer.image[id]}
-                      alt="Photo studio"
-                    />
-                  </div>)}
+                  {Array.from(new Array(6), (x, i) => i + 1).map((id) => (
+                    <div key={id} className="property__image-wrapper">
+                      <img
+                        className="property__image"
+                        src={props.dataOffer.image[id]}
+                        alt="Photo studio"
+                      />
+                    </div>
+                  ))}
                 </div>
-              </div>
-              <div className="property__container container">
-                <div className="property__wrapper">
-                  <div className="property__mark">
-                    <span>Premium</span>
-                  </div>
-                  <div className="property__name-wrapper">
-                    <h1 className="property__name">
-                      Beautiful &amp; luxurious studio at great location
-                    </h1>
-                    <button
-                      className="property__bookmark-button button"
-                      type="button"
-                    >
-                      <svg
-                        className="property__bookmark-icon"
-                        width={31}
-                        height={33}
+                <div className="property__container container">
+                  <div className="property__wrapper">
+                    <div className="property__mark">
+                      <span>Premium</span>
+                    </div>
+                    <div className="property__name-wrapper">
+                      <h1 className="property__name">
+                        Beautiful &amp; luxurious studio at great location
+                      </h1>
+                      <button
+                        className="property__bookmark-button button"
+                        type="button"
                       >
-                        <use xlinkHref="#icon-bookmark" />
-                      </svg>
-                      <span className="visually-hidden">To bookmarks</span>
-                    </button>
-                  </div>
-                  <div className="property__rating rating">
-                    <div className="property__stars rating__stars">
-                      <span style={{ width: '80%' }} />
-                      <span className="visually-hidden">Rating</span>
+                        <svg
+                          className="property__bookmark-icon"
+                          width={31}
+                          height={33}
+                        >
+                          <use xlinkHref="#icon-bookmark" />
+                        </svg>
+                        <span className="visually-hidden">To bookmarks</span>
+                      </button>
                     </div>
-                    <span className="property__rating-value rating__value">
-                      4.8
-                    </span>
-                  </div>
-                  <ul className="property__features">
-                    <li className="property__feature property__feature--entire">
-                      {props.dataOffer.property.type}
-                    </li>
-                    <li className="property__feature property__feature--bedrooms">
-                      {props.dataOffer.property.rooms}
-                    </li>
-                    <li className="property__feature property__feature--adults">
-                      {props.dataOffer.property.adults}
-                    </li>
-                  </ul>
-                  <div className="property__price">
-                    <b className="property__price-value">€{props.dataOffer.price}</b>
-                    <span className="property__price-text">&nbsp;{props.dataOffer.time}</span>
-                  </div>
-                  <div className="property__inside">
-                    <h2 className="property__inside-title">What is inside</h2>
-                    <ul className="property__inside-list">
-                      {Array.from(new Array(9), (x,i) => i+1).map((id) => <li key={id} className="property__inside-item">{props.dataOffer.advantages[id]}</li>)}
-                    </ul>
-                  </div>
-                  <div className="property__host">
-                    <h2 className="property__host-title">Meet the host</h2>
-                    <div className="property__host-user user">
-                      <div className="property__avatar-wrapper property__avatar-wrapper--pro user__avatar-wrapper">
-                        <img
-                          className="property__avatar user__avatar"
-                          src="img/avatar-angelina.jpg"
-                          width={74}
-                          height={74}
-                          alt="Host avatar"
-                        />
+                    <div className="property__rating rating">
+                      <div className="property__stars rating__stars">
+                        <span style={{ width: '80%' }} />
+                        <span className="visually-hidden">Rating</span>
                       </div>
-                      <span className="property__user-name">Angelina</span>
-                      <span className="property__user-status">Pro</span>
+                      <span className="property__rating-value rating__value">
+                        4.8
+                      </span>
                     </div>
-                    <div className="property__description">
-                      <p className="property__text">
-                        A quiet cozy and picturesque that hides behind a a river
-                        by the unique lightness of Amsterdam. The building is
-                        green and from 18th century.
-                      </p>
-                      <p className="property__text">
-                        An independent House, strategically located between
-                        Rembrand Square and National Opera, but where the bustle
-                        of the city comes to rest in this alley flowery and
-                        colorful.
-                      </p>
-                    </div>
-                  </div>
-                  <section className="property__reviews reviews">
-                    <h2 className="reviews__title">
-                      Reviews · <span className="reviews__amount">1</span>
-                    </h2>
-                    <ul className="reviews__list">
-                      <li className="reviews__item">
-                        <div className="reviews__user user">
-                          <div className="reviews__avatar-wrapper user__avatar-wrapper">
-                            <img
-                              className="reviews__avatar user__avatar"
-                              src="img/avatar-max.jpg"
-                              width={54}
-                              height={54}
-                              alt="Reviews avatar"
-                            />
-                          </div>
-                          <span className="reviews__user-name">Max</span>
-                        </div>
-                        <div className="reviews__info">
-                          <div className="reviews__rating rating">
-                            <div className="reviews__stars rating__stars">
-                              <span style={{ width: '80%' }} />
-                              <span className="visually-hidden">Rating</span>
-                            </div>
-                          </div>
-                          <p className="reviews__text">
-                            A quiet cozy and picturesque that hides behind a a
-                            river by the unique lightness of Amsterdam. The
-                            building is green and from 18th century.
-                          </p>
-                          <time className="reviews__time" dateTime="2019-04-24">
-                            April 2019
-                          </time>
-                        </div>
+                    <ul className="property__features">
+                      <li className="property__feature property__feature--entire">
+                        {props.dataOffer.property.type}
+                      </li>
+                      <li className="property__feature property__feature--bedrooms">
+                        {props.dataOffer.property.rooms}
+                      </li>
+                      <li className="property__feature property__feature--adults">
+                        {props.dataOffer.property.adults}
                       </li>
                     </ul>
-                  </section>
+                    <div className="property__price">
+                      <b className="property__price-value">
+                        €{props.dataOffer.price}
+                      </b>
+                      <span className="property__price-text">
+                        &nbsp;{props.dataOffer.time}
+                      </span>
+                    </div>
+                    <div className="property__inside">
+                      <h2 className="property__inside-title">What is inside</h2>
+                      <ul className="property__inside-list">
+                        {Array.from(new Array(9), (x, i) => i + 1).map((id) => (
+                          <li key={id} className="property__inside-item">
+                            {props.dataOffer.advantages[id]}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="property__host">
+                      <h2 className="property__host-title">Meet the host</h2>
+                      <div className="property__host-user user">
+                        <div className="property__avatar-wrapper property__avatar-wrapper--pro user__avatar-wrapper">
+                          <img
+                            className="property__avatar user__avatar"
+                            src="img/avatar-angelina.jpg"
+                            width={74}
+                            height={74}
+                            alt="Host avatar"
+                          />
+                        </div>
+                        <span className="property__user-name">Angelina</span>
+                        <span className="property__user-status">Pro</span>
+                      </div>
+                      <div className="property__description">
+                        <p className="property__text">
+                          A quiet cozy and picturesque that hides behind a a
+                          river by the unique lightness of Amsterdam. The
+                          building is green and from 18th century.
+                        </p>
+                        <p className="property__text">
+                          An independent House, strategically located between
+                          Rembrand Square and National Opera, but where the
+                          bustle of the city comes to rest in this alley flowery
+                          and colorful.
+                        </p>
+                      </div>
+                    </div>
+                    <section className="property__reviews reviews">
+                      <h2 className="reviews__title">
+                        Reviews · <span className="reviews__amount">1</span>
+                      </h2>
+                      <ul className="reviews__list">
+                        <li className="reviews__item">
+                          <div className="reviews__user user">
+                            <div className="reviews__avatar-wrapper user__avatar-wrapper">
+                              <img
+                                className="reviews__avatar user__avatar"
+                                src="img/avatar-max.jpg"
+                                width={54}
+                                height={54}
+                                alt="Reviews avatar"
+                              />
+                            </div>
+                            <span className="reviews__user-name">Max</span>
+                          </div>
+                          <div className="reviews__info">
+                            <div className="reviews__rating rating">
+                              <div className="reviews__stars rating__stars">
+                                <span style={{ width: '80%' }} />
+                                <span className="visually-hidden">Rating</span>
+                              </div>
+                            </div>
+                            <p className="reviews__text">
+                              A quiet cozy and picturesque that hides behind a a
+                              river by the unique lightness of Amsterdam. The
+                              building is green and from 18th century.
+                            </p>
+                            <time
+                              className="reviews__time"
+                              dateTime="2019-04-24"
+                            >
+                              April 2019
+                            </time>
+                          </div>
+                        </li>
+                      </ul>
+                    </section>
+                  </div>
                 </div>
               </div>
               <section className="property__map map" />

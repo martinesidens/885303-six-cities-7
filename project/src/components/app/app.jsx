@@ -6,14 +6,15 @@ import Sign from '../sign/sign';
 import Favorite from '../favorite/favorite';
 import Offer from '../offer/offer';
 import Error from '../error/error';
-
+import OffersList from "../offers-list/offers-list";
 
 function App (props) {
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/" exact>
-          <Main count={props.count} city={props.city} email={props.email} />
+          <OffersList />
+          {/*<Main count={props.count} city={props.city} email={props.email} />*/}
         </Route>
         <Route path="/Sign" exact component={Sign} >
         </Route>

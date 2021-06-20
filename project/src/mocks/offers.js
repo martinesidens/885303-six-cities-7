@@ -1,5 +1,6 @@
 export default function getOffers () {
   return {
+    id: 1,
     image: ['img/room.jpg', 'img/apartment-01.jpg', 'img/apartment-02.jpg', 'img/apartment-03.jpg', 'img/studio-01.jpg', 'img/apartment-01.jpg'],
     title: 'Beautiful & luxurious studio at great location',
     property: {

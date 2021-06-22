@@ -1,12 +1,12 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Main from './../main/main';
+// import Main from './../main/main';
 import PropTypes from 'prop-types';
 import Sign from '../sign/sign';
 import Favorite from '../favorite/favorite';
 import Offer from '../offer/offer';
 import Error from '../error/error';
-import OffersList from "../offers-list/offers-list";
+import OffersList from '../offers-list/offers-list';
 
 function App (props) {
   return (
@@ -31,9 +31,9 @@ function App (props) {
 }
 
 App.propTypes = {
-  city: PropTypes.string.isRequired,
-  count: PropTypes.number.isRequired,
-  email: PropTypes.string.isRequired,
+  // city: PropTypes.string.isRequired,
+  // count: PropTypes.number.isRequired,
+  // email: PropTypes.string.isRequired,
   data: PropTypes.shape({
     image: PropTypes.array.isRequired,
     title: PropTypes.string.isRequired,

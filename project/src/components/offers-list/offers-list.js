@@ -1,4 +1,4 @@
-import Card from '../card/card';
+// import Card from '../card/card';
 import React from 'react';
 
 export default function OffersList() {
@@ -86,7 +86,6 @@ export default function OffersList() {
                     </div>
                   </div>
                   <div className="favorites__places">
-                    {Array.from(new Array(6), (x, i) => i + 5).map((id) => <Card key={id}/>)}
                     <article className="favorites__card place-card">
                       <div className="favorites__image-wrapper place-card__image-wrapper">
                         <a href="#">
